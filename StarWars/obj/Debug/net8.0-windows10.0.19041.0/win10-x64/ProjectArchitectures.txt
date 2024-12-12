@@ -1,0 +1,1 @@
+C:\Solutions\MAUI\StarWars\StarWars\StarWars.csproj;x64
