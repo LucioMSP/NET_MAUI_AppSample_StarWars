@@ -1,1 +1,1 @@
-C:\Solutions\MAUI\StarWars\StarWars\StarWars.csproj;x64
+C:\Solutions\MAUI\NET_MAUI_AppSample_StarWars\StarWars\StarWars.csproj;x64

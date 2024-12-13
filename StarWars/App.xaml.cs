@@ -7,7 +7,7 @@
             InitializeComponent();
 
             //MainPage = new AppShell();
-            MainPage = new Views.TabbedMAUIPage();
+            MainPage = new AppShellCards();
         }
     }
 }

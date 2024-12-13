@@ -6,10 +6,8 @@ namespace StarWars.Service
 {
     public class StarWarsService : IStarWarsService
     {
-        // Variable privada
         private string urlAPI = "https://swapi.dev/api/";
 
-        // Interface
         public async Task<List<PersonajesResponse>> GetPersonajesAsync()
         {
             var client = new HttpClient();
@@ -32,6 +30,18 @@ namespace StarWars.Service
 
             var planetsData = JsonSerializer.Deserialize<List<PlanetsResponse>>(results.ToString());
             return planetsData;
+        }
+
+        public async Task<List<StarShipsResponse>> GetStarShipsAsync()
+        {
+            var client = new HttpClient();
+            var response = await client.GetAsync(urlAPI + "starships/");
+            var responseBody = await response.Content.ReadAsStringAsync();
+            JsonNode nodos = JsonNode.Parse(responseBody);
+            JsonNode results = nodos["results"];
+
+            var starshipsData = JsonSerializer.Deserialize<List<StarShipsResponse>>(results.ToString());
+            return starshipsData;
         }
     }
 }

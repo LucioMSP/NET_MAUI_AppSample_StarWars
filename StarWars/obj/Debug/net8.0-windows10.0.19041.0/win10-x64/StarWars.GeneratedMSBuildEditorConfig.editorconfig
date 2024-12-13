@@ -34,6 +34,12 @@ build_metadata.AdditionalFiles.ManifestResourceName = StarWars.AppShell.xaml
 build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
 build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
 
+[C:/Solutions/MAUI/NET_MAUI_AppSample_StarWars/StarWars/AppShellCards.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = StarWars.AppShellCards.xaml
+build_metadata.AdditionalFiles.TargetPath = AppShellCards.xaml
+build_metadata.AdditionalFiles.RelativePath = AppShellCards.xaml
+
 [C:/Solutions/MAUI/NET_MAUI_AppSample_StarWars/StarWars/MainPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = StarWars.MainPage.xaml
@@ -51,3 +57,21 @@ build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = StarWars.Resources.Styles.Styles.xaml
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
 build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
+
+[C:/Solutions/MAUI/NET_MAUI_AppSample_StarWars/StarWars/Views/PeoplePage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = StarWars.Views.PeoplePage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\PeoplePage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\PeoplePage.xaml
+
+[C:/Solutions/MAUI/NET_MAUI_AppSample_StarWars/StarWars/Views/PlanetsPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = StarWars.Views.PlanetsPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\PlanetsPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\PlanetsPage.xaml
+
+[C:/Solutions/MAUI/NET_MAUI_AppSample_StarWars/StarWars/Views/ShipsPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = StarWars.Views.ShipsPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\ShipsPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\ShipsPage.xaml

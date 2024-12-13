@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+   x:Class="StarWars.AppShellCards"
+   xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+   xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+   xmlns:local="clr-namespace:StarWars"
+   xmlns:views="clr-namespace:StarWars.Views"
+   xmlns:controls="clr-namespace:StarWars.Controls"
+   Shell.FlyoutBehavior="Flyout"
+   Shell.TitleColor="Black"
+   Shell.BackgroundColor="White"
+   Shell.ForegroundColor="Gray"
+   Shell.NavBarIsVisible="True"
+   Shell.NavBarHasShadow="true">
+
+    <Shell.FlyoutHeaderTemplate>
+        <DataTemplate>
+            <Grid BackgroundColor="Blue"
+                 HeightRequest="200">
+                <Label Text=""
+                      TextColor="White"
+                      FontAttributes="Bold"
+                      HorizontalTextAlignment="Center"
+                      VerticalTextAlignment="Center" />
+            </Grid>
+        </DataTemplate>
+    </Shell.FlyoutHeaderTemplate>
+
+    <Shell.ToolbarItems>
+        <ToolbarItem Text="Settings"
+                    Priority="1"
+                    Order="Primary"
+                    />
+
+        <ToolbarItem Text="Profile"
+                    Priority="2"
+                    Order="Secondary"
+                    />
+
+        <ToolbarItem Text="Share App"
+                    Priority="3"
+                    Order="Secondary"
+                    />
+
+        <ToolbarItem Text="Log Out"
+                    Priority="4"
+                    Order="Secondary"
+                    />
+    </Shell.ToolbarItems>
+
+    <Shell.FlyoutBackground>
+        <LinearGradientBrush StartPoint="0,0"
+                            EndPoint="1,1">
+            <GradientStop Color="#8A2387"
+                         Offset="0.1" />
+            <GradientStop Color="#E94057"
+                         Offset="0.6" />
+            <GradientStop Color="#F27121"
+                         Offset="1.0" />
+        </LinearGradientBrush>
+    </Shell.FlyoutBackground>
+
+    <Shell.ItemTemplate>
+        <DataTemplate>
+            <VerticalStackLayout BackgroundColor="white" Spacing="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Padding="10, 5, 10, 1">
+                <!--<Label Text="{Binding Title}" FontAttributes="Bold" />
+                <BoxView HorizontalOptions="StartAndExpand" VerticalOptions="Center" HeightRequest="1" BackgroundColor="Black" />-->
+            </VerticalStackLayout>
+        </DataTemplate>
+    </Shell.ItemTemplate>
+
+    <Shell.FlyoutFooterTemplate>
+        <DataTemplate>
+            <VerticalStackLayout BackgroundColor="Grey" VerticalOptions="CenterAndExpand">
+                <Label Text=""
+                      TextColor="White"
+                      FontAttributes="Bold"
+                      HorizontalOptions="Center" />
+                <Label Text=""
+                      TextColor="Blue"
+                      HorizontalOptions="Center" />
+            </VerticalStackLayout>
+        </DataTemplate>
+    </Shell.FlyoutFooterTemplate>
+
+    <FlyoutItem FlyoutDisplayOptions="AsMultipleItems">
+        <!--
+       <Tab>
+           <ShellContent Title="Cards"
+                         Icon="dotnet_bot.svg"
+                         ContentTemplate="{DataTemplate views:CatsPage}" />
+           <ShellContent Title="New Card"
+                         Icon="dotnet_bot.svg"
+                         ContentTemplate="{DataTemplate views:DogsPage}" />
+       </Tab>
+       -->
+        <controls:CustomShellTabs Title="Main Tab"
+            Icon="dotnet_bot.svg" Style="{DynamicResource MyCustomTextAppearance}">
+            <ShellContent Title="Planets"
+                         Icon="dotnet_bot.svg"
+                         ContentTemplate="{DataTemplate views:PlanetsPage}" />
+            <ShellContent Title="People"
+                         Icon="dotnet_bot.svg"
+                         ContentTemplate="{DataTemplate views:PeoplePage}" />
+            <ShellContent Title="Ships"
+                          Icon="dotnet_bot.svg"
+                          ContentTemplate="{DataTemplate views:ShipsPage}" />
+        </controls:CustomShellTabs>
+        <!-- 
+       <ShellContent Title="Cats Cat"
+                         Icon="dotnet_bot.png"
+                         ContentTemplate="{DataTemplate views:CatsPage}" />
+       <ShellContent Title="Dogs Cat"
+                         Icon="dotnet_bot.png" 
+                         ContentTemplate="{DataTemplate views:DogsPage}" />
+       -->
+    </FlyoutItem>
+
+</Shell>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="StarWars.Views.PlanetsPage"
+             Title="Planets">
+
+    <ScrollView>
+        <VerticalStackLayout
+                Padding="30,10"
+                Spacing="25"
+                VerticalOptions="Start">
+
+            <Button
+                    Text="Get Planets" 
+                    Clicked="OnDataClicked"
+                    HorizontalOptions="Fill" />
+
+            <ActivityIndicator 
+                           x:Name="loading"
+                           HeightRequest="30"
+                           Color="Blue"
+                           IsRunning="True"
+                           IsVisible="False"/>
+
+            <ListView x:Name="listViewPlanets">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal" Padding="10">
+                                <Image Source="{Binding image}" WidthRequest="50"
+                                   HeightRequest="50" Aspect="AspectFill"/>
+                                <Label Text="{Binding name}" VerticalTextAlignment="Center" Margin="10,0,0,0"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
